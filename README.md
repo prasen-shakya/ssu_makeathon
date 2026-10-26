@@ -2,9 +2,39 @@
 
 Localized disaster preparedness and community communication prototype. Safety SAM is built for any disaster that can affect a local community (wildfire, flood, earthquake, hurricane, severe storm, extreme heat, winter weather), with wildfire as the default demonstration scenario.
 
+## What it is
+
+When a disaster is near, residents have to piece together official alerts, hazard maps, nearby shelters, and what neighbors are saying, across many sites. Safety SAM puts these in one place for a selected city (Santa Rosa, CA in the demo):
+
+- **Community feed**: a calm, city-scoped feed of posts and replies, with the latest alert pinned above it.
+- **Live public data**: weather alerts from the National Weather Service, wildfires from NIFC, earthquakes from USGS, and evacuation zones from Cal OES, each shown with its source and fetch time.
+- **Map**: incidents, evacuation zones, fire perimeters, shaking rings, weather alerts, and resources on one map.
+- **Resources**: shelters, water and food, medical, charging, pets, and transportation. Residents can add or report resources. Each is labeled official, verified, or community-submitted, and old entries are marked stale.
+- **Meet SAM**: an AI assistant that gives short answers from the city's data, cites what it used, and points to 911 and official instructions.
+- **Languages**: English, Spanish, Vietnamese, and Simplified Chinese, with labeled on-device translation of posts and alerts.
+- **Disaster simulation**: a scripted, sample-only wildfire for demos when live data is quiet.
+
+Official, public-data, and community content are always visually distinct. Safety SAM is a prototype, not an official emergency service. It does not replace 911, evacuation orders, or responder instructions.
+
+## Screenshots
+
+Captured with live data (no simulation running).
+
+**Feed**: the latest live NWS alert is pinned above community posts, with a summary of nearby live hazards.
+
+![Community feed with a pinned live National Weather Service alert](docs/screenshots/feed.png)
+
+**Map**: live incidents and earthquakes from NIFC and USGS, with layer toggles and a side panel that lists each item with its age and source.
+
+![Map with live wildfire and earthquake data](docs/screenshots/map.png)
+
+**News**: public-data situation updates, each with its source, time, and a link to the original.
+
+![News page with live public-data updates](docs/screenshots/news.png)
+
 ## Current status
 
-The repository includes an initial functional community feed page, Supabase integration, and database migrations. The interface is deliberately simple for testing the core flow.
+The repository includes the community feed, live hazard map, News, Resources, Meet SAM, languages, and the disaster simulation, backed by Supabase and database migrations. See AGENTS.md for what is built and the known gaps.
 
 Read AGENTS.md before making changes. It contains the shared product decisions, safety guardrails, database rules, and handoff checklist for teammates and coding agents.
 
